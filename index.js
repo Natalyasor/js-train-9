@@ -8,9 +8,14 @@
  */
 function findElementGreaterThan(arr, num) {
   // Перевіряємо, чи вхідний параметр є масивом, якщо ні повертаємо undefined
+  if (!Array.isArray(arr)) {
+    return undefined;
+  } 
   // повертаємо undefined
   // Використовуємо метод find для пошуку першого елементу, який є більшим за задане число num.
+  const found = arr.find(element => element > num)
   // Перевіряємо чи є елемент який задовільняє умову
+  return(found);
   //Якщо так повертаємо елемент
   // Якщо ні повертаємо рядок Числа яке задовільняе умову не знайдено
 }
@@ -29,8 +34,13 @@ console.log(findElementGreaterThan([1, 2, 3, 4, 5], 3)); // Виведе 4
  */
 function findIndexByProperty(arr, name) {
   // Перевіряємо, чи вхідний параметр є масивом, якщо ні повертаємо -1
+  if (!Array.isArray(arr)) {
+    return -1;
+  } 
   // Використовуємо метод findIndex для пошуку індексу об'єкта, властивість 'name' якого співпадає з заданим іменем.
+  const found = arr.find(element => element = name)
   // Повертаємо знайдений індекс або -1, якщо об'єкт не знайдено.
+  return(found);
 }
 
 console.log("Завдання: 2  ==============================");
